@@ -17,6 +17,7 @@ export default class extends HTMLElement {
   }
 
   useD3ToRenderSomeContent(renderRoot) {
+    // code taken from: https://observablehq.com/@d3/smooth-zooming
     const height = 500;
     const width = 500;
     const radius = 6;
