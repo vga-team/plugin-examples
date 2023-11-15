@@ -1,0 +1,56 @@
+{
+  "view": {
+    "center": [0, 0],
+    "zoom": 3
+  },
+  "imports": {
+    "demo.tile-layer": "./plugins/tile-layer.plugin.js",
+    "demo.data-provider": "./plugins/data-provider.plugin.js",
+    "demo.data-fetcher": "./plugins/data-fetcher.plugin.js",
+    "demo.shared-state": "./plugins/shared-state.plugin.js"
+  },
+  "plugins": [
+    {
+      "import": "demo.tile-layer",
+      "container": "main",
+      "props": {
+        "layerName": "World_Imagery",
+        "layerType": "base-layer",
+        "active": true,
+        "urlTemplate": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "options": {
+          "attribution": "Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community"
+        }
+      }
+    },
+    {
+      "import": "demo.tile-layer",
+      "container": "main",
+      "props": {
+        "layerName": "NatGeo_World_Map",
+        "layerType": "overlay",
+        "urlTemplate": "https://server.arcgisonline.com/arcgis/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}",
+        "options": {
+          "attribution": "National Geographic, Esri, Garmin, HERE, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, increment P Corp.",
+          "opacity": 0.5
+        }
+      }
+    },
+    {
+      "import": "demo.data-provider",
+      "container": "sidebar"
+    },
+    {
+      "import": "demo.data-fetcher",
+      "container": "sidebar"
+    },
+    {
+      "import": "demo.shared-state",
+      "container": "sidebar"
+    },
+    {
+      "import": "demo.shared-state",
+      "container": "sidebar"
+    }
+  ]
+}
