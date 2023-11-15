@@ -1,6 +1,6 @@
 # plugin-examples
 
-This is an example of implementing VGA plugins as well as a minimal example of creating a VGA app.
+Examples of implementing VGA plugins as well as a minimal example of creating a VGA app.
 
 ## Background Knowledge
 
@@ -28,6 +28,7 @@ In this example repo, a `config.json` file is used and it would be load into the
   - `data-provider.plugin.js` is a sample plugin that registered as a data provider. When the data is queried, it mocks some waiting time and returns an array of number.
   - `shared-state.plugin.js` is a sample plugin that has a shared value across plugins. When the shared value is updated, all the instances of this plugin would be updated with the new value.
   - `tile-layer.plugin.js` is a sample plugin that adds a map layer into the vis. It also shows how the props from the config file is passed in and used.
+  - `d3.plugin.js` is a sample plugin that shows how to import an external library to implement advanced features.
 
 ## How to Start
 
