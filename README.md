@@ -10,7 +10,7 @@ A valid plugin file needs to be an ES module and export a default class that ext
 Basically, it should be ready to be loaded as a [web component](https://developer.mozilla.org/en-US/docs/web/web_components).
 The inner content of the HTML element would be shown as the plugin's UI.
 
-A set of APIs are provided by the vis host and can be used by plugins. Take a look at [here](https://github.com/vga-team/vis-host/blob/main/src/utils/plugin.ts) to learn more.
+A set of APIs are provided by the VGA core and can be used by plugins. Take a look at [here](https://github.com/vga-team/core/blob/main/src/utils/plugin.ts) to learn more.
 
 ### Load A Plugin
 
@@ -21,8 +21,8 @@ In this example repo, a `config.json` file is used and it would be load into the
 ## File Structure
 
 - `index.html` is the entry point of the project.
-- `vga-vis-host.js` is the library to be imported by `index.html`. After imported, a `<vga-vis-host>` HTML tag can be used and it will accept a property `config`.
-- `config.json` is a sample config file that is fetched by a script from `index.html` and loaded into the `gwf-vis-host` element.
+- `vga-core.js` is the library to be imported by `index.html`. After imported, a `<vga-core>` HTML tag can be used and it will accept a property `config`.
+- `config.json` is a sample config file that is fetched by a script from `index.html` and loaded into the `gwf-core` element.
 - `plugins/` is a directory that contians demo plugins.
   - `data-fetcher.plugin.js` is a sample plugin that fetch and display the data from the data provider.
   - `data-provider.plugin.js` is a sample plugin that registered as a data provider. When the data is queried, it mocks some waiting time and returns an array of number.
