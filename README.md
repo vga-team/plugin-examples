@@ -1,6 +1,6 @@
 # plugin-examples
 
-Examples of implementing VGA plugins as well as a minimal example of creating a VGA app.
+A set of practice tasks for getting started with VGA plugin implementation, as well as a minimal example for creating a VGA app.
 
 ## Background Knowledge
 
